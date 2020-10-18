@@ -1,0 +1,25 @@
+{
+  "name": "typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amaljoyc/typescript.git"
+  },
+  "author": "amaljoyc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amaljoyc/typescript/issues"
+  },
+  "homepage": "https://github.com/amaljoyc/typescript#readme",
+  "devDependencies": {
+    "eslint": "^7.11.0",
+    "lite-server": "^2.5.4"
+  },
+  "dependencies": {}
+}
