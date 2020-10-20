@@ -62,3 +62,24 @@ function error(message: string, code: number): never {
     throw {message: message, number: number}
 }
 ```
+
+## Typescript Compiler
+
+- to run all typescript files in watch mode, do
+
+```
+tsc -w
+```
+
+- to run a specific file in watch mode, do
+
+```
+tsc myfile.ts -w
+```
+
+- to init a typescript project, (will create the file tsconfig.json)
+- this tsconfig file can be used to adjust the typescript compiler options
+
+```
+tsc --init
+```
