@@ -18,6 +18,8 @@
 ```
 type MyType = string | number
 type MyType = { name: string; age: number }
+type MyFun = (a: number, b: number) => number
+type MyFunc = () => number
 ```
 
 ### void return type
@@ -215,3 +217,59 @@ const hello = Person.HELLO
 ```
 
 Note: static fields cannot be accessed from non-static methods inside the class using `this`. Instead it can only be accessed using the "ClassName." notation
+
+## Interfaces
+
+```
+interface Person {
+    name: string
+    age: number
+    greet(): void
+}
+
+let person: Person;
+person = {
+    name: "Amal",
+    age: 20,
+    greet() {
+        console.log("Hello " + this.name)
+    }
+}
+
+person.greet()
+```
+
+Notes:
+
+- you an inherit only form one class, but can implement multiple interfaces.
+- also you could extend/inherit an interface from multiple interfaces.
+- you can only use `readonly` modifier inside an interface. Cannot use private, public, or protected.
+- you use an interface if you wanna work with objects. If you rather just need a complex type creation, you could use `type` instead - although the `interface` and `type` can be used interchangably when needed.
+
+### Interface as Function types
+
+```
+interface MyFun {
+    (a: number, b: number): number
+}
+
+let add: MyFun
+add = (a: number, b: number) => a + b
+```
+
+Notes:
+
+- you don't specify the function name when you define an interface for a function type (but you do it when you define and interface for an object type)
+- also it is better to use `type` rather for defining function types.
+
+### Optional properties and method in interface
+
+```
+interface Person {
+    name: string,
+    age?: number, // age is optional
+    greet?(): void // greet is optional
+}
+```
+
+Note: similar to interfaces, you could also have optional properties in classes as well by using the `?:` notation
