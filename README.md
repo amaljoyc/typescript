@@ -273,3 +273,40 @@ interface Person {
 ```
 
 Note: similar to interfaces, you could also have optional properties in classes as well by using the `?:` notation
+
+## Intersection Types
+
+```
+type MyType3 = MyType1 & MyType2
+```
+
+## Type Casting
+
+```
+// syntax 1
+const c = <Person>person
+// syntax 2
+const c = person as Person
+```
+
+## Index Properties
+
+```
+interface Person {
+    [prop: string]: string
+}
+```
+
+## Optional Chaining
+
+```
+const c = obj?.data?.id
+```
+
+## Nullish Coalescing
+
+```
+const s = data ?? "fallback-value"
+```
+
+Note: here if the value of `data` is null or undefined, then the fallback value will be assigned to s
